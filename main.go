@@ -35,6 +35,10 @@ func main() {
 }
 
 func captureLoop(paused *bool, repetition int, timer int) {
+	if repetition == 0 {
+		fmt.Println("Repetition set to 0, exiting...")
+		return
+	}
 	for {
 		if !*paused {
 			captureScreen()
